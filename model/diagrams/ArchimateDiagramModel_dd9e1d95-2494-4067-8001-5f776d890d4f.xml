@@ -1,0 +1,18 @@
+<archimate:ArchimateDiagramModel
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:archimate="http://www.archimatetool.com/archimate"
+    name="App in Life"
+    id="dd9e1d95-2494-4067-8001-5f776d890d4f">
+  <children
+      xsi:type="archimate:DiagramModelArchimateObject"
+      id="52c32499-4397-45b3-a216-480aa6d68c34">
+    <bounds
+        x="268"
+        y="348"
+        width="120"
+        height="55"/>
+    <archimateElement
+        xsi:type="archimate:TechnologyProcess"
+        href="TechnologyProcess_6b7817c6-879d-41a1-9673-eae15ade345b.xml#6b7817c6-879d-41a1-9673-eae15ade345b"/>
+  </children>
+</archimate:ArchimateDiagramModel>

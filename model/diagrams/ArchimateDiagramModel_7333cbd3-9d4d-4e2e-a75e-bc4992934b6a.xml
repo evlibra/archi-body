@@ -1,18 +1,4 @@
 <archimate:ArchimateDiagramModel
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:archimate="http://www.archimatetool.com/archimate"
     name="App in other disciplines"
-    id="7333cbd3-9d4d-4e2e-a75e-bc4992934b6a">
-  <children
-      xsi:type="archimate:DiagramModelArchimateObject"
-      id="4878d1f4-eb35-486a-bd5e-fc5feb31b3a5">
-    <bounds
-        x="237"
-        y="227"
-        width="120"
-        height="55"/>
-    <archimateElement
-        xsi:type="archimate:TechnologyProcess"
-        href="TechnologyProcess_cd2d6154-3075-43f1-9e37-0f0e5046d90f.xml#cd2d6154-3075-43f1-9e37-0f0e5046d90f"/>
-  </children>
-</archimate:ArchimateDiagramModel>
+    id="7333cbd3-9d4d-4e2e-a75e-bc4992934b6a"/>

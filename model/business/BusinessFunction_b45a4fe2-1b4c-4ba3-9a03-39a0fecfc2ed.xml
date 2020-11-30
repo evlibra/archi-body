@@ -1,11 +1,11 @@
 <archimate:BusinessFunction
     xmlns:archimate="http://www.archimatetool.com/archimate"
-    name="Body Horisontal Face Down"
-    id="b8458ffd-3243-47a4-8d51-2fc238c0e3bd">
+    name="Body Horisontal Face Up"
+    id="b45a4fe2-1b4c-4ba3-9a03-39a0fecfc2ed">
   <properties
       key="icon size"
       value="auto"/>
   <properties
       key="icon"
-      value="/body/body/side-face-down.jpg"/>
+      value="/body/body/side-face-up.jpg"/>
 </archimate:BusinessFunction>

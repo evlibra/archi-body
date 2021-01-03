@@ -16,17 +16,7 @@
     <div id="container">
       <div class="inner">
 
-        <header>
-          <a href="https://twitter.com/share" class="twitter-share-button" data-via="shlidor">Tweet</a>
-          <h1>inlineDisqussions</h1>
-          <h2>Inline comments for your site.</h2>
-        </header>
-
-        <section id="downloads" class="clearfix">
-          <a href="https://github.com/tsi/inlineDisqussions/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
-          <a href="https://github.com/tsi/inlineDisqussions/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
-          <a href="https://github.com/tsi/inlineDisqussions" id="view-on-github" class="button"><span>View on GitHub</span></a>
-        </section>
+ 
 
         <hr>
 
@@ -41,106 +31,6 @@
           <p>Right here, try clicking the comment marks on the right of every paragraph on this page.<br>
           When you click on one of those marks, if a discussion already exists, it will load in-place, otherwise a fresh discussion will be created and positioned dynamically next to the relative paragraph.</p>
           <h3>Dynamic positioning you say?</h3>
-          <p class="narrow-p">
-            Check this out, if you try to comment on this paragraph you'll see that I am resizing to fit the available space and that I can also be positioned to the left, if needed.<br><strong>TIP:</strong> You can easily set <code>maxWidth</code> if you don't want the comments to get too wide, see the options section for more info.
-          </p>
-          <h3>Can you highlight?</h3>
-          <p class="highlighted">
-            I sure can, when you click on this paragraph's comments icon you'll see it is highlighted while the rest of the page is being blacked out.<br>
-            You can enable this effect by setting <code>highlight</code> to <code>true</code> in the settings object, see the <em>options</em> section for more info.
-          </p>
-          <h3>Can we still have a main comment thread at the bottom?</h3>
-          <p>
-            Yes we can, check out the bottom of this page. if you have a <code>div#disqus_thread</code> in your document it will function as a main comment thread, just like the normal Disqus comments wrapper.
-          </p>
-          <h2>USAGE</h2>
-          <p>That should be pretty simple.<br>
-          First <a href="https://github.com/tsi/inlineDisqussions/tarball/master">download</a> it, then include the script (anywhere after jQuery):</p>
-<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">&lt;script src=<span style="color: #a31515">&quot;//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;</span>&gt;&lt;/script&gt;<br>&lt;script src=<span style="color: #a31515">&quot;inlineDisqussions.js&quot;</span>&gt;&lt;/script&gt;</pre></div>
-
-
-          <p>Add a little bit of CSS:</p>
-<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">&lt;link rel=<span style="color: #a31515">&quot;stylesheet&quot;</span> type=<span style="color: #a31515">&quot;text/css&quot;</span> href=<span style="color: #a31515">&quot;inlineDisqussions.css&quot;</span> /&gt;</pre></div>
-
-          <p>Now you just need to call it:</p>
-<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">&lt;script&gt;
-  disqus_shortname = <span style="color: #a31515">&#39;your_disqus_shortname&#39;</span>;
-  jQuery(document).ready(<span style="color: #0000ff">function</span>() {
-    jQuery(<span style="color: #a31515">&quot;p&quot;</span>).inlineDisqussions();
-  });
-&lt;/script&gt;
-</pre></div>
-
-
-          <h2>OPTIONS</h2>
-          <p>Right now not many, if you need more <a href="https://github.com/tsi/inlineDisqussions/issues/new">let me know</a>.<br>
-          You can pass a settings object containing the following options (these are the defaults):</p>
-<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">jQuery(<span style="color: #a31515">&quot;p&quot;</span>).inlineDisqussions({
-  identifier: <span style="color: #a31515">&#39;disqussion&#39;</span>,
-  displayCount: <span style="color: #0000ff">true</span>,
-  highlighted: <span style="color: #0000ff">false</span>,
-  position: <span style="color: #a31515">&#39;right&#39;</span>,
-  background: <span style="color: #a31515">&#39;white&#39;</span>,
-  maxWidth: 9999
-});
-</pre></div>
-
-
-          <table>
-            <tbody>
-              <tr>
-                <td>identifier</td>
-                <td>string</td>
-                <td>set a string to be used, together with an index number, as the <code>disqus_identifier</code> string. defaults to &#39;disqussion&#39;.</td>
-              </tr>
-              <tr>
-                <td>displayCount</td>
-                <td>boolean</td>
-                <td>Enable/disable the comment count inside the icon. defaults to true.</td>
-              </tr>
-              <tr>
-                <td>highlighted</td>
-                <td>boolean</td>
-                <td>Enable/disable the highlighting of the active section. defaults to false.</td>
-              </tr>
-              <tr>
-                <td>position</td>
-                <td>string</td>
-                <td>Where to position the inline threads, 'left'/'right'. defaults to 'right'.</td>
-              </tr>
-              <tr>
-                <td>background</td>
-                <td>string</td>
-                <td>CSS background-color for the comment threads.</td>
-              </tr>
-              <tr>
-                <td>maxWidth</td>
-                <td>number</td>
-                <td>Maximum width, in pixels, for the comment threads.</td>
-              </tr>
-            </tbody>
-          </table>
-
-
-          <h2>LIMITATIONS</h2>
-          <p>There is (at least) one - each paragraph gets a unique ID to get the right comment thread attached to it, these IDs are automatically generated according to the order paragraphs appear in. That means that if you ever change the order of your paragraphs or add a new paragraph to the top of your article you might cause a wrong comment thread to be attached to that paragraph.<br>
-          <strong>WORKAROUND:</strong> You can add a <code>data-disqus-identifier</code> attribute to the paragraph to force it to get a specific comments thread, something like this:</p>
-<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">&lt;p data-disqus-identifier=<span style="color: #a31515">&quot;disqussion-12&quot;</span>&gt;
-  Lorem ipsum...
-&lt;/p&gt;
-</pre></div>
-
-          <h2>ISSUES</h2>
-          <p>If you have any, <a href="https://github.com/tsi/inlineDisqussions/issues/new">let me know</a>.</p>
-        </section>
-
-    <div id="disqus_thread"></div>
-        <footer>
-          inlineDisqussions is maintained by <a href="https://github.com/tsi">Tsachi Shlidor</a><br>
-        </footer>
-
-      </div>
-    </div>
 
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
@@ -163,9 +53,8 @@
     <script src="inlineDisqussions.js"></script>
     <script>
 	  disqus_shortname = 'archi-body';
-jQuery(document).ready(function() {
-        jQuery("p:not('.highlighted, .narrow-p')").inlineDisqussions({
-          position: 'right'
+		jQuery(document).ready(function() {
+        jQuery("p").inlineDisqussions({
         });
 	  });	
 	</script>		

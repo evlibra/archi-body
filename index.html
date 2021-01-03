@@ -8,8 +8,8 @@
   </head>
 
   <body>
-	  <p>Test Me 1</p>
-	  <p>Test Me 2</p>
+	  <li>Test Me 1</li>
+	  <li>Test Me 2</li>
 
 	  <div id="disqus_thread"></div>
 	  
@@ -32,11 +32,7 @@
     <script>
 	  disqus_shortname = 'archi-body';
 		jQuery(document).ready(function() {
-		jQuery("p").inlineDisqussions({
-          identifier: 'disqussion-narrow-p',
-		  highlighted: true,
-          position: 'left'
-        });	
+		jQuery("li").inlineDisqussions();	
 	});
 	</script>		
 </body>

@@ -1,41 +1,173 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html class="model" lang="en">
 <head>
-	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-	<title>Body</title>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="inlineDisqussions.css" media="screen" />
+    <link rel="icon" type="image/png" href="favicon.ico">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>inlineDisqussions - Inline comments for your site</title>
+  </head>
 
-	<!-- JQUERY (use 1.x branch to be compatible with IE 6/7/8) / UI / LAYOUT -->
-	<script type="text/javascript" src="lib/jquery/js/jquery-1.11.2.min.js"></script>
-	<script type="text/javascript" src="lib/jquery-ui/js/jquery-ui-1.11.2.min.js"></script>
-	<script type="text/javascript" src="lib/jquery-ui-layout/js/jquery.layout-1.4.4.js"></script>
-	<link type="text/css" rel="stylesheet" href="lib/jquery-ui-layout/css/layout-default-1.4.4.css">
-	<!-- BOOTSTRAP -->
-	<link type="text/css" rel="stylesheet" href="lib/bootstrap/css/bootstrap-3.3.2.min.css">
-	<link type="text/css" rel="stylesheet" href="lib/bootstrap/css/bootstrap-theme-3.3.2.min.css">
-	<script type="text/javascript" src="lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
-	<!-- REPORT SPECIFIC -->
-	<link type="text/css" rel="stylesheet" href="css/model.css">
-	<link type="text/css" rel="stylesheet" href="css/i18n.css">
+  <body>
+    <div id="container">
+      <div class="inner">
 
-	<script type="text/javascript" src="js/model.js"></script>
-</head>
+        <header>
+          <a href="https://twitter.com/share" class="twitter-share-button" data-via="shlidor">Tweet</a>
+          <h1>inlineDisqussions</h1>
+          <h2>Inline comments for your site.</h2>
+        </header>
 
-<body>
-<p>Hello me 1</p>
-<p>Hello me 2</p>
-<p>Hello me 3</p>
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/tsi/inlineDisqussions/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/tsi/inlineDisqussions/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/tsi/inlineDisqussions" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
 
-	<!-- END HINT MODAL DIALOG -->
-	<!-- COMMENTS -->	
-	<link rel="stylesheet" type="text/css" href="inlineDisqussions.css" />
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js></script>
-	<script>window.jQuery || document.write('<script src="jquery-1.9.1.min.js"><\/script>')</script>
-	<script src="inlineDisqussions.js"></script>
-	<script>
+        <hr>
+
+        <section id="main_content">
+          <p>Comments are <code>!important</code>, they create a discussion between the author and the readers. Some comments are just simple feedback, some can help clarify a vague point, some comments can even offer a totally different approach for solving the same problem.</p>
+          <p>The problem with most comments is <strong>context</strong> - in most cases, comment threads are positioned at the bottom of the post. In these situations, commenting on a specific point in the article becomes quite difficult, I guess this is why we have "quotes" - by repeating a certain part of the original post, you could refer to the specific point where it was mentioned and comment in that specific context. That was OK, for 2005, but what if you could simply comment anywhere?</p>
+          <p>Inline comments are not a totally new thing, <a href="https://medium.com/">Medium</a> did it, and probably others too, but with this plugin, virtually anyone can.</p>
+          <p>inlineDisqussions is a jQuery plugin to allow inline comments on your site.<br>
+          Comments threads are created with the power of the awesome (and free) <a href="http://disqus.com/">Disqus</a>, they are created dynamically and attached to the specific sections (paragraph, usually, but not necessarily) of your post. The original use-case was naturally a blog post so you could comment next to each paragraph, but you could use this to have comment threads on every section of any web page - think of commenting on every product in a one-page catalog, on each picture in a photo gallery etc.</p>
+
+          <h2>DEMO</h2>
+          <p>Right here, try clicking the comment marks on the right of every paragraph on this page.<br>
+          When you click on one of those marks, if a discussion already exists, it will load in-place, otherwise a fresh discussion will be created and positioned dynamically next to the relative paragraph.</p>
+          <h3>Dynamic positioning you say?</h3>
+          <p class="narrow-p">
+            Check this out, if you try to comment on this paragraph you'll see that I am resizing to fit the available space and that I can also be positioned to the left, if needed.<br><strong>TIP:</strong> You can easily set <code>maxWidth</code> if you don't want the comments to get too wide, see the options section for more info.
+          </p>
+          <h3>Can you highlight?</h3>
+          <p class="highlighted">
+            I sure can, when you click on this paragraph's comments icon you'll see it is highlighted while the rest of the page is being blacked out.<br>
+            You can enable this effect by setting <code>highlight</code> to <code>true</code> in the settings object, see the <em>options</em> section for more info.
+          </p>
+          <h3>Can we still have a main comment thread at the bottom?</h3>
+          <p>
+            Yes we can, check out the bottom of this page. if you have a <code>div#disqus_thread</code> in your document it will function as a main comment thread, just like the normal Disqus comments wrapper.
+          </p>
+          <h2>USAGE</h2>
+          <p>That should be pretty simple.<br>
+          First <a href="https://github.com/tsi/inlineDisqussions/tarball/master">download</a> it, then include the script (anywhere after jQuery):</p>
+<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">&lt;script src=<span style="color: #a31515">&quot;//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js&quot;</span>&gt;&lt;/script&gt;<br>&lt;script src=<span style="color: #a31515">&quot;inlineDisqussions.js&quot;</span>&gt;&lt;/script&gt;</pre></div>
+
+
+          <p>Add a little bit of CSS:</p>
+<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">&lt;link rel=<span style="color: #a31515">&quot;stylesheet&quot;</span> type=<span style="color: #a31515">&quot;text/css&quot;</span> href=<span style="color: #a31515">&quot;inlineDisqussions.css&quot;</span> /&gt;</pre></div>
+
+          <p>Now you just need to call it:</p>
+<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">&lt;script&gt;
+  disqus_shortname = <span style="color: #a31515">&#39;your_disqus_shortname&#39;</span>;
+  jQuery(document).ready(<span style="color: #0000ff">function</span>() {
+    jQuery(<span style="color: #a31515">&quot;p&quot;</span>).inlineDisqussions();
+  });
+&lt;/script&gt;
+</pre></div>
+
+
+          <h2>OPTIONS</h2>
+          <p>Right now not many, if you need more <a href="https://github.com/tsi/inlineDisqussions/issues/new">let me know</a>.<br>
+          You can pass a settings object containing the following options (these are the defaults):</p>
+<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">jQuery(<span style="color: #a31515">&quot;p&quot;</span>).inlineDisqussions({
+  identifier: <span style="color: #a31515">&#39;disqussion&#39;</span>,
+  displayCount: <span style="color: #0000ff">true</span>,
+  highlighted: <span style="color: #0000ff">false</span>,
+  position: <span style="color: #a31515">&#39;right&#39;</span>,
+  background: <span style="color: #a31515">&#39;white&#39;</span>,
+  maxWidth: 9999
+});
+</pre></div>
+
+
+          <table>
+            <tbody>
+              <tr>
+                <td>identifier</td>
+                <td>string</td>
+                <td>set a string to be used, together with an index number, as the <code>disqus_identifier</code> string. defaults to &#39;disqussion&#39;.</td>
+              </tr>
+              <tr>
+                <td>displayCount</td>
+                <td>boolean</td>
+                <td>Enable/disable the comment count inside the icon. defaults to true.</td>
+              </tr>
+              <tr>
+                <td>highlighted</td>
+                <td>boolean</td>
+                <td>Enable/disable the highlighting of the active section. defaults to false.</td>
+              </tr>
+              <tr>
+                <td>position</td>
+                <td>string</td>
+                <td>Where to position the inline threads, 'left'/'right'. defaults to 'right'.</td>
+              </tr>
+              <tr>
+                <td>background</td>
+                <td>string</td>
+                <td>CSS background-color for the comment threads.</td>
+              </tr>
+              <tr>
+                <td>maxWidth</td>
+                <td>number</td>
+                <td>Maximum width, in pixels, for the comment threads.</td>
+              </tr>
+            </tbody>
+          </table>
+
+
+          <h2>LIMITATIONS</h2>
+          <p>There is (at least) one - each paragraph gets a unique ID to get the right comment thread attached to it, these IDs are automatically generated according to the order paragraphs appear in. That means that if you ever change the order of your paragraphs or add a new paragraph to the top of your article you might cause a wrong comment thread to be attached to that paragraph.<br>
+          <strong>WORKAROUND:</strong> You can add a <code>data-disqus-identifier</code> attribute to the paragraph to force it to get a specific comments thread, something like this:</p>
+<div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><pre style="margin: 0; line-height: 125%">&lt;p data-disqus-identifier=<span style="color: #a31515">&quot;disqussion-12&quot;</span>&gt;
+  Lorem ipsum...
+&lt;/p&gt;
+</pre></div>
+
+          <h2>ISSUES</h2>
+          <p>If you have any, <a href="https://github.com/tsi/inlineDisqussions/issues/new">let me know</a>.</p>
+        </section>
+
+    <div id="disqus_thread"></div>
+        <footer>
+          inlineDisqussions is maintained by <a href="https://github.com/tsi">Tsachi Shlidor</a><br>
+        </footer>
+
+      </div>
+    </div>
+
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'inlinecomments'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="jquery-1.9.1.min.js"><\/script>')</script>
+    <script src="inlineDisqussions.js"></script>
+    <script>
 	  disqus_shortname = 'archi-body';
-	  jQuery(document).ready(function() {
-		jQuery("p").inlineDisqussions();
-	  });
+jQuery(document).ready(function() {
+        jQuery("p:not('.highlighted, .narrow-p')").inlineDisqussions({
+          position: 'right'
+        });
+	  });	
 	</script>		
 </body>
 </html>

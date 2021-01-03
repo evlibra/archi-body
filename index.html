@@ -481,10 +481,12 @@
 
     <script>
 	  disqus_shortname = 'archi-body';
+	  selection_id = document.getSelection();
 		jQuery(document).ready(function() {
         jQuery("a").inlineDisqussions( {
-			identifier: 'disqussion-narrow-p',
-			position: 'right'
+			identifier: selection_id,
+			position: 'right',
+			maxWidth: 300
 		});
         <!--jQuery("div").inlineDisqussions();-->
 	  });	

@@ -32,10 +32,11 @@
     <script>
 	  disqus_shortname = 'archi-body';
 		jQuery(document).ready(function() {
-        jQuery("p").inlineDisqussions({
-          position: 'right'
-        });
-	  });	
+		jQuery("p").inlineDisqussions({
+          identifier: 'disqussion-narrow-p',
+		  highlighted: true,
+          position: 'left'
+        });	
 	</script>		
 </body>
 </html>

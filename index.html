@@ -16,17 +16,8 @@
 	<!-- REPORT SPECIFIC -->
 	<link type="text/css" rel="stylesheet" href="css/model.css">
 	<link type="text/css" rel="stylesheet" href="css/i18n.css">
-	<link rel="stylesheet" type="text/css" href="inlineDisqussions.css" />
+
 	<script type="text/javascript" src="js/model.js"></script>
-	<!-- COMMENTS -->	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js></script>
-	<script src="inlineDisqussions.js"></script>
-	<script>
-	  disqus_shortname = 'archi-body';
-	  jQuery(document).ready(function() {
-		jQuery("p").inlineDisqussions();
-	  });
-	</script>		
 </head>
 
 <body>
@@ -482,13 +473,19 @@
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default i18n-close" data-dismiss="modal"></button>
 				</div>
-			</div>
-			
-		<div id="disqus_thread"></div>		
+			</div>	
 		</div>
 	</div>
-
 	<!-- END HINT MODAL DIALOG -->
-
+	<!-- COMMENTS -->	
+	<link rel="stylesheet" type="text/css" href="inlineDisqussions.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js></script>
+	<script src="inlineDisqussions.js"></script>
+	<script>
+	  disqus_shortname = 'archi-body';
+	  jQuery(document).ready(function() {
+		jQuery("p").inlineDisqussions();
+	  });
+	</script>		
 </body>
 </html>

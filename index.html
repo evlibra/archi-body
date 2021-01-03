@@ -16,6 +16,17 @@
 	<!-- REPORT SPECIFIC -->
 	<link type="text/css" rel="stylesheet" href="css/model.css">
 	<link type="text/css" rel="stylesheet" href="css/i18n.css">
+	<!-- COMMENTS -->	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js></script>
+	<script src="inlineDisqussions.js"></script>
+	link rel="stylesheet" type="text/css" href="inlineDisqussions.css" />
+
+	<script>
+	  disqus_shortname = 'archi-body';
+	  jQuery(document).ready(function() {
+		jQuery("p").inlineDisqussions();
+	  });
+	</script>	
 	<script type="text/javascript" src="js/model.js"></script>
 </head>
 
@@ -479,16 +490,6 @@
 	</div>
 
 	<!-- END HINT MODAL DIALOG -->
-	<!-- COMMENTS -->	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js></script>
-	<script src="inlineDisqussions.js"></script>
-	link rel="stylesheet" type="text/css" href="inlineDisqussions.css" />
 
-	<script>
-	  disqus_shortname = 'archi-body';
-	  jQuery(document).ready(function() {
-		jQuery("p").inlineDisqussions();
-	  });
-	</script>	
 </body>
 </html>

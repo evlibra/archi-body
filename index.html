@@ -476,5 +476,16 @@
 		</div>
 	</div>
 	<!-- END HINT MODAL DIALOG -->
+	<!-- COMMENTS -->	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="inlineDisqussions.js"></script>
+	<link rel="stylesheet" type="text/css" href="inlineDisqussions.css" />
+
+	<script>
+	  disqus_shortname = 'archi-body';
+	  jQuery(document).ready(function() {
+		jQuery("li").inlineDisqussions();
+	  });
+	</script>	
 </body>
 </html>

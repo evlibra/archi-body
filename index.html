@@ -1,37 +1,15 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html class="model" lang="en">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="inlineDisqussions.css" media="screen" />
-    <link rel="icon" type="image/png" href="favicon.ico">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <title>inlineDisqussions - Inline comments for your site</title>
   </head>
 
   <body>
-    <div id="container">
-      <div class="inner">
+	  <p>Test Me 1</p>
+	  <p>Test Me 2</p>
 
- 
-
-        <hr>
-
-        <section id="main_content">
-          <p>Comments are <code>!important</code>, they create a discussion between the author and the readers. Some comments are just simple feedback, some can help clarify a vague point, some comments can even offer a totally different approach for solving the same problem.</p>
-          <p>The problem with most comments is <strong>context</strong> - in most cases, comment threads are positioned at the bottom of the post. In these situations, commenting on a specific point in the article becomes quite difficult, I guess this is why we have "quotes" - by repeating a certain part of the original post, you could refer to the specific point where it was mentioned and comment in that specific context. That was OK, for 2005, but what if you could simply comment anywhere?</p>
-          <p>Inline comments are not a totally new thing, <a href="https://medium.com/">Medium</a> did it, and probably others too, but with this plugin, virtually anyone can.</p>
-          <p>inlineDisqussions is a jQuery plugin to allow inline comments on your site.<br>
-          Comments threads are created with the power of the awesome (and free) <a href="http://disqus.com/">Disqus</a>, they are created dynamically and attached to the specific sections (paragraph, usually, but not necessarily) of your post. The original use-case was naturally a blog post so you could comment next to each paragraph, but you could use this to have comment threads on every section of any web page - think of commenting on every product in a one-page catalog, on each picture in a photo gallery etc.</p>
-
-          <h2>DEMO</h2>
-          <p>Right here, try clicking the comment marks on the right of every paragraph on this page.<br>
-          When you click on one of those marks, if a discussion already exists, it will load in-place, otherwise a fresh discussion will be created and positioned dynamically next to the relative paragraph.</p>
-          <h3>Dynamic positioning you say?</h3>
-
+	  <div id="disqus_thread"></div>
+	  
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
         var disqus_shortname = 'archi-body'; // required: replace example with your forum shortname
@@ -43,9 +21,6 @@
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

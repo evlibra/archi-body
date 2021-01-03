@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="inlineDisqussions.css" media="screen" />
-    <link rel="icon" type="image/png" href="favicon.ico">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -26,9 +25,6 @@
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -37,7 +33,7 @@
     <script>
 	  disqus_shortname = 'archi-body';
 		jQuery(document).ready(function() {
-        jQuery("p:not('.highlighted, .narrow-p')").inlineDisqussions({
+        jQuery("p").inlineDisqussions({
           position: 'right'
         });
         jQuery("p.highlighted").inlineDisqussions({

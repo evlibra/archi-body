@@ -476,15 +476,17 @@
 				</div>
 			</div>
 		</div>
+		
 	</div>
-	<!-- END HINT MODAL DIALOG -->
 
+	<!-- END HINT MODAL DIALOG -->
+ 
     <script>
 	  disqus_shortname = 'archi-body';
 	  selection_id = document.getSelection();
 		jQuery(document).ready(function() {
         jQuery("a").inlineDisqussions( {
-			identifier: selection_id,
+			identifier: selection_id.toString() ,
 			position: 'right',
 			maxWidth: 300
 		});

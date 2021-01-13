@@ -71,16 +71,19 @@ modelreport(model, strategyFolder, businessFolder, applicationFolder, technology
 					<b><a href="^model.Id^/elements/model.html" target="view">^model.Name;format="xml-encode"^</a></b>
 					<ul class="tree">
 					<!-- START OF STRINGTEMPLATE CODE -->
+						<li><span class="i18n-views"><i class="glyphicon glyphicon-triangle-right"></i> </span>
+							^expandFolder(viewsFolder, "view")^
+						</li>
 						<li><span class="i18n-model_content"><i class="glyphicon glyphicon-triangle-right"></i> </span>
 							<ul>
+								<li><span class="i18n-application_layer"><i class="glyphicon glyphicon-triangle-right"></i> </span>
+									^expandFolder(applicationFolder, "element")^
+								</li>
                                 <li><span class="i18n-strategy"><i class="glyphicon glyphicon-triangle-right"></i> </span>
                                     ^expandFolder(strategyFolder, "element")^
                                 </li>
 								<li><span class="i18n-business_layer"><i class="glyphicon glyphicon-triangle-right"></i> </span>
 									^expandFolder(businessFolder, "element")^
-								</li>
-								<li><span class="i18n-application_layer"><i class="glyphicon glyphicon-triangle-right"></i> </span>
-									^expandFolder(applicationFolder, "element")^
 								</li>
 								<li><span class="i18n-technology_layer"><i class="glyphicon glyphicon-triangle-right"></i> </span>
 									^expandFolder(technologyFolder, "element")^
@@ -94,13 +97,10 @@ modelreport(model, strategyFolder, businessFolder, applicationFolder, technology
 								<li><span class="i18n-connectors"><i class="glyphicon glyphicon-triangle-right"></i> </span>
 									^expandFolder(otherFolder, "element")^
 								</li>
-								<li><span class="i18n-relations"><i class="glyphicon glyphicon-triangle-right"></i> </span>
-									^expandFolder(relationsFolder, "element")^
-								</li>
+								<!--<li><span class="i18n-relations"><i class="glyphicon glyphicon-triangle-right"></i> </span>-->
+								<!--	^expandFolder(relationsFolder, "element")^-->
+								<!--</li>-->
 							</ul>
-						</li>
-						<li><span class="i18n-views"><i class="glyphicon glyphicon-triangle-right"></i> </span>
-							^expandFolder(viewsFolder, "view")^
 						</li>
 					<!-- END OF STRINGTEMPLATE CODE -->
 					</ul>

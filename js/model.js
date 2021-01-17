@@ -43,7 +43,7 @@ $(document).ready(function() {
 	setRootPanelHeight();
 	
 	// Setup modeltree
-	$('.tree li:has(ul)').addClass('parent_li').find(' > ul > li').show();
+	$('.tree li:has(ul)').addClass('parent_li').find(' > ul > li').hide();
 
 	// Add show/hide function on modeltree
 	$('.tree li.parent_li > span').on('click', function (e) {

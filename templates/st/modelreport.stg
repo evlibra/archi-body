@@ -41,6 +41,7 @@ modelreport(model, strategyFolder, businessFolder, applicationFolder, technology
 	<link type="text/css" rel="stylesheet" href="css/model.css">
 	<link type="text/css" rel="stylesheet" href="css/i18n.css">
 	<script type="text/javascript" src="js/model.js"></script>
+	<script src="https://hypothes.is/embed.js" async></script>	
 </head>
 
 <body>

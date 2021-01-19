@@ -76,6 +76,9 @@ modelreport(model, strategyFolder, businessFolder, applicationFolder, technology
 						</li>
 						<li><span class="i18n-model_content"><i class="glyphicon glyphicon-triangle-right"></i> </span>
 							<ul>
+								<li><span class="i18n-technology_layer"><i class="glyphicon glyphicon-triangle-right"></i> </span>
+									^expandFolder(technologyFolder, "element")^
+								</li>
 								<li><span class="i18n-application_layer"><i class="glyphicon glyphicon-triangle-right"></i> </span>
 									^expandFolder(applicationFolder, "element")^
 								</li>
@@ -84,9 +87,6 @@ modelreport(model, strategyFolder, businessFolder, applicationFolder, technology
                                 </li>
 								<li><span class="i18n-business_layer"><i class="glyphicon glyphicon-triangle-right"></i> </span>
 									^expandFolder(businessFolder, "element")^
-								</li>
-								<li><span class="i18n-technology_layer"><i class="glyphicon glyphicon-triangle-right"></i> </span>
-									^expandFolder(technologyFolder, "element")^
 								</li>
 								<li><span class="i18n-motivation"><i class="glyphicon glyphicon-triangle-right"></i> </span>
 									^expandFolder(motivationFolder, "element")^

@@ -63,4 +63,40 @@ $(document).ready(function() {
 		}
 		e.stopPropagation();
 	});
+	
+	let $viewLinks = $("a[href][target='view']");
+	$viewLinks.on('click', function (event) {
+		const id = event.currentTarget.href.split("/").pop().slice(0, -5);
+		window.location.hash = '#' + id;
+		event.stopPropagation();
+		return false;
+	});
+	function openViewFromHash(e) {
+		const isInitialLoad = e === undefined;
+		const targetId = window.location.hash.substr(1);
+		const matchingLinks = $viewLinks.filter(function (index, element) {
+			const id = element.href.split("/").pop().slice(0, -5);
+			return id === targetId;
+		});
+		const link = matchingLinks[0];
+		if (link) {
+			const $link = $(link);
+			$("iframe[name='view']").attr('src', $link.attr('href'));
+			if (isInitialLoad) {
+				let spans = [];
+				let $parentListItem = $link.parent().parent().parent();
+				while ($parentListItem[0].tagName === 'LI') {
+					spans.push($parentListItem.children().first());
+					$parentListItem = $parentListItem.parent().parent();
+				}
+				while (spans.length) {
+					spans.pop().click();
+				}
+			}
+		}
+	}
+	openViewFromHash(); //Read initial hash on page load
+	$(window).on('hashchange', openViewFromHash);
 });
+
+

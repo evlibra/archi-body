@@ -45,7 +45,7 @@ $(document).ready(function() {
 	// Setup modeltree
 	$('.tree li:has(ul)').addClass('parent_li').find(' > ul > li').show();
 
-	// Add show/hide function on modeltree
+// Add show/hide function on modeltree
 	$('.tree li.parent_li > span').on('click', function (e) {
 		var children = $(this).parent('li.parent_li').find(' > ul > li');
 		if (children.is(":visible")) {
@@ -64,13 +64,9 @@ $(document).ready(function() {
 		e.stopPropagation();
 	});
 	
+	// Enable deeplinks
 	let $viewLinks = $("a[href][target='view']");
-	$viewLinks.on('click', function (event) {
-		const id = event.currentTarget.href.split("/").pop().slice(0, -5);
-		window.location.hash = '#' + id;
-		event.stopPropagation();
-		return false;
-	});
+	
 	function openViewFromHash(e) {
 		const isInitialLoad = e === undefined;
 		const targetId = window.location.hash.substr(1);
@@ -97,6 +93,14 @@ $(document).ready(function() {
 	}
 	openViewFromHash(); //Read initial hash on page load
 	$(window).on('hashchange', openViewFromHash);
+	
+	// Must be done last because otherwise the first load of the iframe would trigger a has change
+	$("iframe[name='view']").on('load', function (event) {
+		const id = event.currentTarget.contentWindow.location.href.split("/").pop().slice(0, -5);
+		window.location.hash = '#' + id;
+		event.stopPropagation();
+		return false;
+	});
 });
 
 

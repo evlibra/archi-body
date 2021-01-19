@@ -87,7 +87,6 @@ $(document).ready(function() {
 				}
 				while (spans.length) {
 					spans.pop().click();
-					spans.pop().click();
 				}
 			}
 		}

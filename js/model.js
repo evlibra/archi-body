@@ -43,7 +43,7 @@ $(document).ready(function() {
 	setRootPanelHeight();
 	
 	// Setup modeltree
-	$('.tree li:has(ul)').addClass('parent_li').find(' > ul > li').show();
+	$('.tree li:has(ul)').addClass('parent_li').find(' > ul > li').hide();
 
 // Add show/hide function on modeltree
 	$('.tree li.parent_li > span').on('click', function (e) {
@@ -65,7 +65,7 @@ $(document).ready(function() {
 	});
 	
 	// Enable deeplinks
-	let $viewLinks = $("a[href][target='view']");
+	let $viewLinks = $("a[href][target='element']");
 	
 	function openViewFromHash(e) {
 		const isInitialLoad = e === undefined;
@@ -77,7 +77,7 @@ $(document).ready(function() {
 		const link = matchingLinks[0];
 		if (link) {
 			const $link = $(link);
-			$("iframe[name='view']").attr('src', $link.attr('href'));
+			$("iframe[name='element']").attr('src', $link.attr('href'));
 			if (isInitialLoad) {
 				let spans = [];
 				let $parentListItem = $link.parent().parent().parent();
@@ -95,7 +95,7 @@ $(document).ready(function() {
 	$(window).on('hashchange', openViewFromHash);
 	
 	// Must be done last because otherwise the first load of the iframe would trigger a has change
-	$("iframe[name='view']").on('load', function (event) {
+	$("iframe[name='element']").on('load', function (event) {
 		const id = event.currentTarget.contentWindow.location.href.split("/").pop().slice(0, -5);
 		window.location.hash = '#' + id;
 		event.stopPropagation();

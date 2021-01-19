@@ -59,10 +59,10 @@ modelreport(model, strategyFolder, businessFolder, applicationFolder, technology
 		</nav>
 	</div>
 
-	<iframe name="view" class="ui-layout-center" src="^model.Id^/elements/model.html" scrolling="no"></iframe>
+	<iframe enable-annotation name="view" class="ui-layout-center" src="^model.Id^/elements/model.html" scrolling="no"></iframe>
 
 	<div class="ui-layout-west">
-		<iframe name="element" class="ui-layout-south" src="elements/empty-element.html"  scrolling="no"></iframe>
+		<iframe enable-annotation name="element" class="ui-layout-south" src="elements/empty-element.html"  scrolling="no"></iframe>
 		<div class="ui-layout-center">
 			<div class="panel panel-default root-panel">
 				<div class="panel-heading root-panel-heading">

@@ -6,7 +6,12 @@
   <children
       xsi:type="archimate:DiagramModelArchimateObject"
       id="0959d279-154f-4c69-b793-acac666408d0"
-      textAlignment="4">
+      textAlignment="4"
+      imagePath="images/_UgbXoC-8Eeyab7xEYcDF7w.jpg"
+      imagePosition="9">
+    <features
+        name="imageSource"
+        value="1"/>
     <sourceConnections
         xsi:type="archimate:DiagramModelArchimateConnection"
         id="2deb6cf6-3765-4e22-8d56-da9537cc2377"
@@ -460,7 +465,7 @@
         <children
             xsi:type="archimate:DiagramModelReference"
             id="id-b72953b4ed294a91bc57d08b20013623"
-            font="1|Segoe UI|1.0|0|WINDOWS|1|-2|0|0|0|400|0|0|0|0|3|2|1|34|Segoe UI"
+            font="1|Segoe UI|10.0|0|WINDOWS|1|-20|0|0|0|400|0|0|0|0|3|2|1|34|Segoe UI"
             textAlignment="4"
             alpha="0"
             textPosition="2">

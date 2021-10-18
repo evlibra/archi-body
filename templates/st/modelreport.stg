@@ -41,6 +41,7 @@ modelreport(model, strategyFolder, businessFolder, applicationFolder, technology
 	<link type="text/css" rel="stylesheet" href="css/model.css">
 	<link type="text/css" rel="stylesheet" href="css/i18n.css">
 	<script type="text/javascript" src="js/model.js"></script>
+	<script src="https://hypothes.is/embed.js" async></script>
 </head>
 
 <body>
@@ -58,10 +59,10 @@ modelreport(model, strategyFolder, businessFolder, applicationFolder, technology
 		</nav>
 	</div>
 
-	<iframe name="view" class="ui-layout-center" src="^model.Id^/elements/model.html" scrolling="no"></iframe>
+	<iframe enable-annotation name="view" class="ui-layout-center" src="^model.Id^/elements/model.html" scrolling="no"></iframe>
 
 	<div class="ui-layout-west">
-		<iframe name="element" class="ui-layout-south" src="elements/empty-element.html"  scrolling="no"></iframe>
+		<iframe enable-annotation name="element" class="ui-layout-south" src="elements/empty-element.html"  scrolling="no"></iframe>
 		<div class="ui-layout-center">
 			<div class="panel panel-default root-panel">
 				<div class="panel-heading root-panel-heading">
@@ -71,19 +72,22 @@ modelreport(model, strategyFolder, businessFolder, applicationFolder, technology
 					<b><a href="^model.Id^/elements/model.html" target="view">^model.Name;format="xml-encode"^</a></b>
 					<ul class="tree">
 					<!-- START OF STRINGTEMPLATE CODE -->
+						<li><span class="i18n-views"><i class="glyphicon glyphicon-triangle-right"></i> </span>
+							^expandFolder(viewsFolder, "view")^
+						</li>
 						<li><span class="i18n-model_content"><i class="glyphicon glyphicon-triangle-right"></i> </span>
 							<ul>
+								<li><span class="i18n-technology_layer"><i class="glyphicon glyphicon-triangle-right"></i> </span>
+									^expandFolder(technologyFolder, "element")^
+								</li>
+								<li><span class="i18n-application_layer"><i class="glyphicon glyphicon-triangle-right"></i> </span>
+									^expandFolder(applicationFolder, "element")^
+								</li>
                                 <li><span class="i18n-strategy"><i class="glyphicon glyphicon-triangle-right"></i> </span>
                                     ^expandFolder(strategyFolder, "element")^
                                 </li>
 								<li><span class="i18n-business_layer"><i class="glyphicon glyphicon-triangle-right"></i> </span>
 									^expandFolder(businessFolder, "element")^
-								</li>
-								<li><span class="i18n-application_layer"><i class="glyphicon glyphicon-triangle-right"></i> </span>
-									^expandFolder(applicationFolder, "element")^
-								</li>
-								<li><span class="i18n-technology_layer"><i class="glyphicon glyphicon-triangle-right"></i> </span>
-									^expandFolder(technologyFolder, "element")^
 								</li>
 								<li><span class="i18n-motivation"><i class="glyphicon glyphicon-triangle-right"></i> </span>
 									^expandFolder(motivationFolder, "element")^
@@ -94,13 +98,10 @@ modelreport(model, strategyFolder, businessFolder, applicationFolder, technology
 								<li><span class="i18n-connectors"><i class="glyphicon glyphicon-triangle-right"></i> </span>
 									^expandFolder(otherFolder, "element")^
 								</li>
-								<li><span class="i18n-relations"><i class="glyphicon glyphicon-triangle-right"></i> </span>
-									^expandFolder(relationsFolder, "element")^
-								</li>
+								<!--<li><span class="i18n-relations"><i class="glyphicon glyphicon-triangle-right"></i> </span>-->
+								<!--	^expandFolder(relationsFolder, "element")^-->
+								<!--</li>-->
 							</ul>
-						</li>
-						<li><span class="i18n-views"><i class="glyphicon glyphicon-triangle-right"></i> </span>
-							^expandFolder(viewsFolder, "view")^
 						</li>
 					<!-- END OF STRINGTEMPLATE CODE -->
 					</ul>

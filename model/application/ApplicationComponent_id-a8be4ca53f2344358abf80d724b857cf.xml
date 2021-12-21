@@ -1,11 +1,4 @@
 <archimate:ApplicationComponent
     xmlns:archimate="http://www.archimatetool.com/archimate"
     name="Body Horisontal Face Up"
-    id="id-a8be4ca53f2344358abf80d724b857cf">
-  <properties
-      key="icon"
-      value="/body/body/side-face-up.jpg"/>
-  <properties
-      key="icon size"
-      value="auto"/>
-</archimate:ApplicationComponent>
+    id="id-a8be4ca53f2344358abf80d724b857cf"/>

@@ -13,9 +13,6 @@
     <features
         name="iconVisible"
         value="1"/>
-    <features
-        name="imageSource"
-        value="1"/>
     <sourceConnections
         xsi:type="archimate:DiagramModelArchimateConnection"
         id="id-dca2fe05d8eb4f1d80d099756137d42d"

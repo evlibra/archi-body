@@ -7,7 +7,15 @@
       xsi:type="archimate:DiagramModelArchimateObject"
       id="id-9dbd7ec9ffb749d2b5aa9947a713de23"
       textAlignment="4"
+      imagePath="images/_aa3YYGKWEeyEZvOKOF06kw.jpg"
+      imagePosition="9"
       type="1">
+    <features
+        name="iconVisible"
+        value="1"/>
+    <features
+        name="imageSource"
+        value="1"/>
     <sourceConnections
         xsi:type="archimate:DiagramModelArchimateConnection"
         id="id-dca2fe05d8eb4f1d80d099756137d42d"

@@ -2,4 +2,15 @@
     xmlns:archimate="http://www.archimatetool.com/archimate"
     name="Body"
     id="198667f9-f68d-46a1-8bf6-01c97c861d17"
-    version="4.6.0"/>
+    version="4.9.0">
+  <profiles
+      name="Specialization 1"
+      id="id-e25d78b9801f4c1e9b41eaeac2dedbed"
+      imagePath="images/_aa3YYGKWEeyEZvOKOF06kw.jpg"
+      conceptType="ApplicationComponent"/>
+  <profiles
+      name="Specialization 2"
+      id="id-9c90f327681742299790d3093116cd0f"
+      imagePath="images/_B5AWsGKXEeyEZvOKOF06kw.jpg"
+      conceptType="ApplicationComponent"/>
+</archimate:ArchimateModel>

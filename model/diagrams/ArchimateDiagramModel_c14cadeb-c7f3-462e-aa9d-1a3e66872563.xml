@@ -7,6 +7,7 @@
       xsi:type="archimate:DiagramModelArchimateObject"
       id="id-220b265edac643a1b268e39190aff7fc"
       textAlignment="4"
+      imagePosition="9"
       type="1">
     <sourceConnections
         xsi:type="archimate:DiagramModelArchimateConnection"
@@ -698,5 +699,5 @@
   </children>
   <properties
       key="must replace icons"
-      value="no"/>
+      value="yes"/>
 </archimate:ArchimateDiagramModel>

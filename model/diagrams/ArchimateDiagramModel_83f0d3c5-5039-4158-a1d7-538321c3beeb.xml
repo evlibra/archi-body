@@ -4,18 +4,6 @@
     name="Hips"
     id="83f0d3c5-5039-4158-a1d7-538321c3beeb">
   <children
-      xsi:type="archimate:DiagramModelReference"
-      id="id-00d6db0ebdee4aadb00f870ccb34a419">
-    <bounds
-        x="8"
-        y="9"
-        width="120"
-        height="55"/>
-    <referencedModel
-        xsi:type="archimate:ArchimateDiagramModel"
-        href="ArchimateDiagramModel_c14cadeb-c7f3-462e-aa9d-1a3e66872563.xml#c14cadeb-c7f3-462e-aa9d-1a3e66872563"/>
-  </children>
-  <children
       xsi:type="archimate:DiagramModelArchimateObject"
       id="id-a8c1f8f594b945268c6778b936e79b99"
       alpha="130">
@@ -73,5 +61,17 @@
     <archimateElement
         xsi:type="archimate:ApplicationComponent"
         href="ApplicationComponent_id-37821a2aeecb4dea8dde473dc54af6df.xml#id-37821a2aeecb4dea8dde473dc54af6df"/>
+  </children>
+  <children
+      xsi:type="archimate:DiagramModelReference"
+      id="id-9239c270087244939539359a1a9515b2">
+    <bounds
+        x="18"
+        y="11"
+        width="120"
+        height="55"/>
+    <referencedModel
+        xsi:type="archimate:ArchimateDiagramModel"
+        href="ArchimateDiagramModel_id-8213cf619daf46d3860ee74fcfb7a22b.xml#id-8213cf619daf46d3860ee74fcfb7a22b"/>
   </children>
 </archimate:ArchimateDiagramModel>

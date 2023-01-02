@@ -211,3 +211,9 @@ function searchInViews() {
 	foundItems.show();
 	foundItems.parent("ul").parent("li").find("> span > i").addClass('glyphicon-triangle-bottom').removeClass('glyphicon-triangle-right');
 }
+
+window.hypothesisConfig = function () {
+  return {
+    "openSidebar": true
+  };
+};

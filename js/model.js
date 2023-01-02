@@ -81,7 +81,7 @@ $(document).ready(function() {
 	
 	
 	// Setup modeltree
-	$('.tree li:has(ul)').addClass('parent_li').find(' > ul > li').show();
+	$('.tree li:has(ul)').addClass('parent_li').find(' > ul > li').hide();
 
 	// Add show/hide function on modeltree
 	$('.tree li.parent_li > span').on('click', function (e) {
@@ -181,7 +181,7 @@ function searchInViews() {
 
 	// Hide all entries
 	listItems = $('.tree li');
-	listItems.hide();
+	listItems.show();
 	listItems.find(' > span > i').addClass('glyphicon-triangle-right').removeClass('glyphicon-triangle-bottom');
 
 	// Is a filter set?

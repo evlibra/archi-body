@@ -187,7 +187,7 @@ function searchInViews() {
 	// Is a filter set?
 	if (filter.length === 0) {
 		// No: show the top level entries ('Model Content' and 'Views') and stop here
-		$('.tree > li').show();
+		$('.tree > li').hide();
 		$('#tree-search').removeClass('filtered');
 		document.querySelector('#tree-search').title = "";
 		return;

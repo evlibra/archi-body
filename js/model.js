@@ -74,14 +74,14 @@ $(document).ready(function() {
 	$('.hide-true').remove();
 	let topTreeFolders = $('.tree > li');
 	topTreeFolders.each(function(index) {
-		if (! $(this).find(' > ul > li').size()) {
+		if (! $(this).find(' > ul > li').length) {
 			$(this).remove();
 		}
 	});
 	
 	
 	// Setup modeltree
-	$('.tree li:has(ul)').addClass('parent_li').find(' > ul > li').show();
+	$('.tree li:has(ul)').addClass('parent_li').find(' > ul > li').hide();
 
 	// Add show/hide function on modeltree
 	$('.tree li.parent_li > span').on('click', function (e) {
@@ -187,7 +187,7 @@ function searchInViews() {
 	// Is a filter set?
 	if (filter.length === 0) {
 		// No: show the top level entries ('Model Content' and 'Views') and stop here
-		$('.tree > li').hide();
+		$('.tree > li').show();
 		$('#tree-search').removeClass('filtered');
 		document.querySelector('#tree-search').title = "";
 		return;

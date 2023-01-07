@@ -1,11 +1,11 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html class="frame" lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 	<title>Body</title>
 
-	<!-- JQUERY (use 1.x branch to be compatible with IE 6/7/8) -->
-	<script type="text/javascript" src="../../lib/jquery/js/jquery-1.11.2.min.js"></script>
+	<!-- JQUERY -->
+	<script type="text/javascript" src="../../lib/jquery/jquery.min.js"></script>
 	<!-- BOOTSTRAP -->
 	<link type="text/css" rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.yeti.css">
 	<script type="text/javascript" src="../../lib/bootstrap/js/bootstrap-3.3.2.min.js"></script>
@@ -14,6 +14,7 @@
 	<link type="text/css" rel="stylesheet" href="../../css/i18n.css">
 	<script type="text/javascript" src="../../js/frame.js"></script>
 	<script type="text/javascript" src="../../js/imageMapResizer.min.js"></script>
+	<script type="text/javascript" src="../../js/panelBodyScroller.js"></script>
 </head>
 
 <body>
@@ -166,8 +167,6 @@
 											dataElements.push({id:"id-0f1814a44a0e4fa292dd17fc299f8c95", type:"ApplicationComponent", specialization:decodeURL(""), name:decodeURL("Upper+Back"), documentation:decodeURL("")});
 
 
-									dataFoldersContent.push({folderid:"f8c4f42c-9813-4625-8086-2524a83af620", contentid:"id-8696fd093079489f9aef63becc5acbfb", contenttype:"ApplicationComponent"});
-										dataElements.push({id:"id-8696fd093079489f9aef63becc5acbfb", type:"ApplicationComponent", specialization:decodeURL("Body"), name:decodeURL("Body"), documentation:decodeURL("")});
 									dataFoldersContent.push({folderid:"f8c4f42c-9813-4625-8086-2524a83af620", contentid:"id-2c95c0c77f5649c09dfc342f263194da", contenttype:"ApplicationComponent"});
 										dataElements.push({id:"id-2c95c0c77f5649c09dfc342f263194da", type:"ApplicationComponent", specialization:decodeURL(""), name:decodeURL("Glutes+Maximus"), documentation:decodeURL("")});
 									dataFoldersContent.push({folderid:"f8c4f42c-9813-4625-8086-2524a83af620", contentid:"id-390a93041b974066b11472d4722f08c1", contenttype:"ApplicationComponent"});
@@ -309,12 +308,6 @@
 										dataRelationships.push({id:"id-f588ae5f5ba3419b944ab081922dbdd0", type:"CompositionRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-a8be4ca53f2344358abf80d724b857cf", targetid:"id-142242885887463d8162640a28dc4ecd"});
 									dataFoldersContent.push({folderid:"ca89f3d8-307d-4616-9324-3951e5060f7b", contentid:"id-f7ce0a09871c4b45a3ebd61fbe502594", contenttype:"CompositionRelationship"});
 										dataRelationships.push({id:"id-f7ce0a09871c4b45a3ebd61fbe502594", type:"CompositionRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-eba66175265d45a1b46c109747a2bdc6", targetid:"id-bcf278173d6b448d867d013282b53bd4"});
-									dataFoldersContent.push({folderid:"ca89f3d8-307d-4616-9324-3951e5060f7b", contentid:"id-0fdc6303081b4d4bae683b2ef7f4d2e2", contenttype:"CompositionRelationship"});
-										dataRelationships.push({id:"id-0fdc6303081b4d4bae683b2ef7f4d2e2", type:"CompositionRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-8696fd093079489f9aef63becc5acbfb", targetid:"id-eba66175265d45a1b46c109747a2bdc6"});
-									dataFoldersContent.push({folderid:"ca89f3d8-307d-4616-9324-3951e5060f7b", contentid:"id-773853544e7543d8893d37002b62caf1", contenttype:"CompositionRelationship"});
-										dataRelationships.push({id:"id-773853544e7543d8893d37002b62caf1", type:"CompositionRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-8696fd093079489f9aef63becc5acbfb", targetid:"id-e1df6c3a95704a39a1f66db13450d7be"});
-									dataFoldersContent.push({folderid:"ca89f3d8-307d-4616-9324-3951e5060f7b", contentid:"id-97933c87f04042318bb5607f4fa641b2", contenttype:"CompositionRelationship"});
-										dataRelationships.push({id:"id-97933c87f04042318bb5607f4fa641b2", type:"CompositionRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-8696fd093079489f9aef63becc5acbfb", targetid:"id-142242885887463d8162640a28dc4ecd"});
 									dataFoldersContent.push({folderid:"ca89f3d8-307d-4616-9324-3951e5060f7b", contentid:"id-54f5b5391c3b4c82902cdf7710e8345a", contenttype:"CompositionRelationship"});
 										dataRelationships.push({id:"id-54f5b5391c3b4c82902cdf7710e8345a", type:"CompositionRelationship", specialization:decodeURL(""), name:decodeURL(""), documentation:decodeURL(""), sourceid:"id-e1df6c3a95704a39a1f66db13450d7be", targetid:"id-390a93041b974066b11472d4722f08c1"});
 									dataFoldersContent.push({folderid:"ca89f3d8-307d-4616-9324-3951e5060f7b", contentid:"id-75f0ed8ad43740d1a4b35b0cbc6667f2", contenttype:"CompositionRelationship"});
@@ -520,7 +513,17 @@
 										dataViews.push({id:"id-8213cf619daf46d3860ee74fcfb7a22b", type:"ArchimateDiagramModel", name:decodeURL("Body"), documentation:decodeURL("")});
 													dataProperties.push({conceptid:"id-8213cf619daf46d3860ee74fcfb7a22b", propkey:decodeURL("must+replace+icons"), propvalue:decodeURL("no")});
 
-												dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-8696fd093079489f9aef63becc5acbfb", contenttype:"ApplicationComponent"});
+														dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-31957b172a3548db9407826cfa7eff0f", contenttype:"ApplicationComponent"});
+																dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-8a47519445b0482886f176887be73553", contenttype:"ApplicationComponent"});
+																		dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-1589c9cbbaf74b26b0692a15f007f87a", contenttype:"ApplicationComponent"});
+																		dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-0f1814a44a0e4fa292dd17fc299f8c95", contenttype:"ApplicationComponent"});
+																
+																dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-b962c1bcdd4a4f15972fafd3cb93ce9c", contenttype:"ApplicationComponent"});
+																		dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-61b6bb9801ae403494537a0574c6a9d1", contenttype:"ApplicationComponent"});
+																		dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-5ac1d13cd4a44825a8ca51aea47be166", contenttype:"ApplicationComponent"});
+																
+																dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-bf6f552e39dc4eac88d92f4c3a66c470", contenttype:"ApplicationComponent"});
+														
 														dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-142242885887463d8162640a28dc4ecd", contenttype:"ApplicationComponent"});
 																dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-e1df6c3a95704a39a1f66db13450d7be", contenttype:"ApplicationComponent"});
 																		dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-447998c47cd7423f857f9af4e84bd06b", contenttype:"ArchimateDiagramModel"});
@@ -539,21 +542,20 @@
 																
 														
 												
-												dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-31957b172a3548db9407826cfa7eff0f", contenttype:"ApplicationComponent"});
-														dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-8a47519445b0482886f176887be73553", contenttype:"ApplicationComponent"});
-																dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-1589c9cbbaf74b26b0692a15f007f87a", contenttype:"ApplicationComponent"});
-																dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-0f1814a44a0e4fa292dd17fc299f8c95", contenttype:"ApplicationComponent"});
-														
-														dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-b962c1bcdd4a4f15972fafd3cb93ce9c", contenttype:"ApplicationComponent"});
-																dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-61b6bb9801ae403494537a0574c6a9d1", contenttype:"ApplicationComponent"});
-																dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-5ac1d13cd4a44825a8ca51aea47be166", contenttype:"ApplicationComponent"});
-														
-														dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-bf6f552e39dc4eac88d92f4c3a66c470", contenttype:"ApplicationComponent"});
-												
 
-																		dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-0fdc6303081b4d4bae683b2ef7f4d2e2", contenttype:"CompositionRelationship"});
-																		dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-97933c87f04042318bb5607f4fa641b2", contenttype:"CompositionRelationship"});
+																				dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-41b5441f1fce4d9ca676c4a8d6707b32", contenttype:"CompositionRelationship"});
+																				dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-82539ffe879f46b5bae717d706154ca9", contenttype:"CompositionRelationship"});
+																				dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-2a4221247b7b403e917e39ae0663236f", contenttype:"CompositionRelationship"});
 
+																						dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-f2d25e2098194001bb37e82fbdea7639", contenttype:"CompositionRelationship"});
+																						dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-88a230167b1c4362980cf746f1d998cb", contenttype:"CompositionRelationship"});
+
+																
+																						dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-74da1b4aca914bb6bf24176c19014199", contenttype:"CompositionRelationship"});
+																						dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-c06986493e474a5bb858c00bb4277002", contenttype:"CompositionRelationship"});
+
+																
+														
 																				dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-8196cc78f41745ae8174a671e15809ee", contenttype:"CompositionRelationship"});
 																				dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-637c60a401c44777971d3e069130379b", contenttype:"CompositionRelationship"});
 
@@ -568,19 +570,6 @@
 																						dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-b5d62dc513574b398567a9d01eca79e8", contenttype:"CompositionRelationship"});
 
 																
-														
-												
-																		dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-41b5441f1fce4d9ca676c4a8d6707b32", contenttype:"CompositionRelationship"});
-																		dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-82539ffe879f46b5bae717d706154ca9", contenttype:"CompositionRelationship"});
-																		dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-2a4221247b7b403e917e39ae0663236f", contenttype:"CompositionRelationship"});
-
-																				dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-f2d25e2098194001bb37e82fbdea7639", contenttype:"CompositionRelationship"});
-																				dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-88a230167b1c4362980cf746f1d998cb", contenttype:"CompositionRelationship"});
-
-														
-																				dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-74da1b4aca914bb6bf24176c19014199", contenttype:"CompositionRelationship"});
-																				dataViewsContent.push({viewid:"id-8213cf619daf46d3860ee74fcfb7a22b", contentid:"id-c06986493e474a5bb858c00bb4277002", contenttype:"CompositionRelationship"});
-
 														
 												
 
@@ -614,25 +603,6 @@
 										dataViews.push({id:"id-e2cabfe99efe4f23ae8aec9cb7d55942", type:"ArchimateDiagramModel", name:decodeURL("Body+%28copy%29"), documentation:decodeURL("")});
 													dataProperties.push({conceptid:"id-e2cabfe99efe4f23ae8aec9cb7d55942", propkey:decodeURL("must+replace+icons"), propvalue:decodeURL("no")});
 
-												dataViewsContent.push({viewid:"id-e2cabfe99efe4f23ae8aec9cb7d55942", contentid:"id-8696fd093079489f9aef63becc5acbfb", contenttype:"ApplicationComponent"});
-														dataViewsContent.push({viewid:"id-e2cabfe99efe4f23ae8aec9cb7d55942", contentid:"id-142242885887463d8162640a28dc4ecd", contenttype:"ApplicationComponent"});
-																dataViewsContent.push({viewid:"id-e2cabfe99efe4f23ae8aec9cb7d55942", contentid:"id-e1df6c3a95704a39a1f66db13450d7be", contenttype:"ApplicationComponent"});
-																		dataViewsContent.push({viewid:"id-e2cabfe99efe4f23ae8aec9cb7d55942", contentid:"id-447998c47cd7423f857f9af4e84bd06b", contenttype:"ArchimateDiagramModel"});
-																
-																dataViewsContent.push({viewid:"id-e2cabfe99efe4f23ae8aec9cb7d55942", contentid:"id-589f6fc90b424053ae8979c829f09e36", contenttype:"ApplicationComponent"});
-																dataViewsContent.push({viewid:"id-e2cabfe99efe4f23ae8aec9cb7d55942", contentid:"id-4e91ca3e63334246b4440a20db3962c9", contenttype:"ArchimateDiagramModel"});
-														
-														dataViewsContent.push({viewid:"id-e2cabfe99efe4f23ae8aec9cb7d55942", contentid:"id-eba66175265d45a1b46c109747a2bdc6", contenttype:"ApplicationComponent"});
-																dataViewsContent.push({viewid:"id-e2cabfe99efe4f23ae8aec9cb7d55942", contentid:"id-ff927aecc92544da97dad2201ae677a4", contenttype:"ApplicationComponent"});
-																dataViewsContent.push({viewid:"id-e2cabfe99efe4f23ae8aec9cb7d55942", contentid:"id-ee01e0a065c445e38b6ef12e09e97f0a", contenttype:"ApplicationComponent"});
-																dataViewsContent.push({viewid:"id-e2cabfe99efe4f23ae8aec9cb7d55942", contentid:"id-bcf278173d6b448d867d013282b53bd4", contenttype:"ApplicationComponent"});
-																dataViewsContent.push({viewid:"id-e2cabfe99efe4f23ae8aec9cb7d55942", contentid:"id-37821a2aeecb4dea8dde473dc54af6df", contenttype:"ApplicationComponent"});
-																		dataViewsContent.push({viewid:"id-e2cabfe99efe4f23ae8aec9cb7d55942", contentid:"id-5520536adf77434eaeac7fe87b41996b", contenttype:"ApplicationComponent"});
-																		dataViewsContent.push({viewid:"id-e2cabfe99efe4f23ae8aec9cb7d55942", contentid:"id-f06407d9811042a680ed3b3d6e5f7718", contenttype:"ApplicationComponent"});
-																		dataViewsContent.push({viewid:"id-e2cabfe99efe4f23ae8aec9cb7d55942", contentid:"83f0d3c5-5039-4158-a1d7-538321c3beeb", contenttype:"ArchimateDiagramModel"});
-																
-														
-												
 												dataViewsContent.push({viewid:"id-e2cabfe99efe4f23ae8aec9cb7d55942", contentid:"id-31957b172a3548db9407826cfa7eff0f", contenttype:"ApplicationComponent"});
 														dataViewsContent.push({viewid:"id-e2cabfe99efe4f23ae8aec9cb7d55942", contentid:"id-8a47519445b0482886f176887be73553", contenttype:"ApplicationComponent"});
 																dataViewsContent.push({viewid:"id-e2cabfe99efe4f23ae8aec9cb7d55942", contentid:"id-1589c9cbbaf74b26b0692a15f007f87a", contenttype:"ApplicationComponent"});
@@ -645,25 +615,6 @@
 														dataViewsContent.push({viewid:"id-e2cabfe99efe4f23ae8aec9cb7d55942", contentid:"id-bf6f552e39dc4eac88d92f4c3a66c470", contenttype:"ApplicationComponent"});
 												
 
-																		dataViewsContent.push({viewid:"id-e2cabfe99efe4f23ae8aec9cb7d55942", contentid:"id-0fdc6303081b4d4bae683b2ef7f4d2e2", contenttype:"CompositionRelationship"});
-																		dataViewsContent.push({viewid:"id-e2cabfe99efe4f23ae8aec9cb7d55942", contentid:"id-97933c87f04042318bb5607f4fa641b2", contenttype:"CompositionRelationship"});
-
-																				dataViewsContent.push({viewid:"id-e2cabfe99efe4f23ae8aec9cb7d55942", contentid:"id-8196cc78f41745ae8174a671e15809ee", contenttype:"CompositionRelationship"});
-																				dataViewsContent.push({viewid:"id-e2cabfe99efe4f23ae8aec9cb7d55942", contentid:"id-637c60a401c44777971d3e069130379b", contenttype:"CompositionRelationship"});
-
-																
-														
-																				dataViewsContent.push({viewid:"id-e2cabfe99efe4f23ae8aec9cb7d55942", contentid:"id-1c50f1ca87a04cfb8447c27158a356af", contenttype:"CompositionRelationship"});
-																				dataViewsContent.push({viewid:"id-e2cabfe99efe4f23ae8aec9cb7d55942", contentid:"id-f7ce0a09871c4b45a3ebd61fbe502594", contenttype:"CompositionRelationship"});
-																				dataViewsContent.push({viewid:"id-e2cabfe99efe4f23ae8aec9cb7d55942", contentid:"id-79d80168eaf74b9dac7de53a3b14d18f", contenttype:"CompositionRelationship"});
-																				dataViewsContent.push({viewid:"id-e2cabfe99efe4f23ae8aec9cb7d55942", contentid:"id-a3255c1e6b584c3e8525e42f0499aa12", contenttype:"CompositionRelationship"});
-
-																						dataViewsContent.push({viewid:"id-e2cabfe99efe4f23ae8aec9cb7d55942", contentid:"id-e1a599dc859c4cba9d109e6cf63eff4d", contenttype:"CompositionRelationship"});
-																						dataViewsContent.push({viewid:"id-e2cabfe99efe4f23ae8aec9cb7d55942", contentid:"id-b5d62dc513574b398567a9d01eca79e8", contenttype:"CompositionRelationship"});
-
-																
-														
-												
 																		dataViewsContent.push({viewid:"id-e2cabfe99efe4f23ae8aec9cb7d55942", contentid:"id-41b5441f1fce4d9ca676c4a8d6707b32", contenttype:"CompositionRelationship"});
 																		dataViewsContent.push({viewid:"id-e2cabfe99efe4f23ae8aec9cb7d55942", contentid:"id-82539ffe879f46b5bae717d706154ca9", contenttype:"CompositionRelationship"});
 																		dataViewsContent.push({viewid:"id-e2cabfe99efe4f23ae8aec9cb7d55942", contentid:"id-2a4221247b7b403e917e39ae0663236f", contenttype:"CompositionRelationship"});

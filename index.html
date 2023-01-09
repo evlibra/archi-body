@@ -17,28 +17,13 @@
 	<link type="text/css" rel="stylesheet" href="css/i18n.css">
 	<script type="text/javascript" src="js/model.js"></script>
 	<script type="text/javascript" src="js/url-polyfill.min.js"></script>
-	<script async src="https://hypothes.is/embed.js"></script>
 </head>
 
 <body>
-	<!-- "ui-layout-north" class set (topbar) -->
-	<div class="ui-layout-north">
-		<nav class="navbar navbar-inverse">
-			<div class="navbar-header">
-				<span class="navbar-brand">Body</span>
-			</div>
-			<div class="collapse navbar-collapse">
-				<ul class="nav navbar-nav navbar-right">
-					<li><a href="#myModal" data-toggle="modal" class="go"><span class="i18n-about"></span></a></li>
-				</ul>
-			</div>
-		</nav>
-	</div>
-
-	<iframe enable-annotation name="view" class="ui-layout-center" src="198667f9-f68d-46a1-8bf6-01c97c861d17/elements/model.html" scrolling="no"></iframe>
+	<iframe name="element" class="ui-layout-center" src="198667f9-f68d-46a1-8bf6-01c97c861d17/elements/empty-element.html" scrolling="no"></iframe>
 
 	<div class="ui-layout-west">
-		<iframe enable-annotation name="element" class="ui-layout-south" src="elements/empty-element.html"  scrolling="no"></iframe>
+	<!--	<iframe name="element" class="ui-layout-south" src="elements/empty-element.html"  scrolling="no"></iframe> --!>
 		<div class="ui-layout-center">
 			<div class="panel panel-default root-panel">
 				<div class="panel-heading root-panel-heading">
@@ -48,6 +33,18 @@
 					<b><a href="198667f9-f68d-46a1-8bf6-01c97c861d17/elements/model.html" target="view">Body</a></b>
 					<ul class="tree">
 					<!-- START OF STRINGTEMPLATE CODE -->
+						<li class="tree-folder "><span class="i18n-views"><i class="glyphicon glyphicon-triangle-right"></i> </span>
+							<ul>
+											<li class="tree-element "><a href="198667f9-f68d-46a1-8bf6-01c97c861d17/views/83f0d3c5-5039-4158-a1d7-538321c3beeb.html" target="view"> Hips </a></li>
+											<li class="tree-element  "><a href="198667f9-f68d-46a1-8bf6-01c97c861d17/views/b90805b2-7a2c-47e2-86a7-b2d5d1dd95a6.html" target="view"> Front Awareness </a></li>
+											<li class="tree-element  "><a href="198667f9-f68d-46a1-8bf6-01c97c861d17/views/c14cadeb-c7f3-462e-aa9d-1a3e66872563.html" target="view"> Bridge </a></li>
+											<li class="tree-element  "><a href="198667f9-f68d-46a1-8bf6-01c97c861d17/views/id-8213cf619daf46d3860ee74fcfb7a22b.html" target="view"> Body </a></li>
+											<li class="tree-element "><a href="198667f9-f68d-46a1-8bf6-01c97c861d17/views/id-447998c47cd7423f857f9af4e84bd06b.html" target="view"> Glutes </a></li>
+											<li class="tree-element "><a href="198667f9-f68d-46a1-8bf6-01c97c861d17/views/id-4e91ca3e63334246b4440a20db3962c9.html" target="view"> Pelvis </a></li>
+											<li class="tree-element  "><a href="198667f9-f68d-46a1-8bf6-01c97c861d17/views/id-e2cabfe99efe4f23ae8aec9cb7d55942.html" target="view"> Body (copy) </a></li>
+
+							</ul>
+						</li>
 						<li class="tree-folder sorted"><span class="i18n-model_content"><i class="glyphicon glyphicon-triangle-right"></i> </span>
 							<ul>
                                 <li class="tree-folder "><span class="i18n-strategy"><i class="glyphicon glyphicon-triangle-right"></i> </span>
@@ -332,23 +329,28 @@
 								</li>
 							</ul>
 						</li>
-						<li class="tree-folder "><span class="i18n-views"><i class="glyphicon glyphicon-triangle-right"></i> </span>
-							<ul>
-											<li class="tree-element "><a href="198667f9-f68d-46a1-8bf6-01c97c861d17/views/83f0d3c5-5039-4158-a1d7-538321c3beeb.html" target="view"> Hips </a></li>
-											<li class="tree-element  "><a href="198667f9-f68d-46a1-8bf6-01c97c861d17/views/b90805b2-7a2c-47e2-86a7-b2d5d1dd95a6.html" target="view"> Front Awareness </a></li>
-											<li class="tree-element  "><a href="198667f9-f68d-46a1-8bf6-01c97c861d17/views/c14cadeb-c7f3-462e-aa9d-1a3e66872563.html" target="view"> Bridge </a></li>
-											<li class="tree-element  "><a href="198667f9-f68d-46a1-8bf6-01c97c861d17/views/id-8213cf619daf46d3860ee74fcfb7a22b.html" target="view"> Body </a></li>
-											<li class="tree-element "><a href="198667f9-f68d-46a1-8bf6-01c97c861d17/views/id-447998c47cd7423f857f9af4e84bd06b.html" target="view"> Glutes </a></li>
-											<li class="tree-element "><a href="198667f9-f68d-46a1-8bf6-01c97c861d17/views/id-4e91ca3e63334246b4440a20db3962c9.html" target="view"> Pelvis </a></li>
-											<li class="tree-element  "><a href="198667f9-f68d-46a1-8bf6-01c97c861d17/views/id-e2cabfe99efe4f23ae8aec9cb7d55942.html" target="view"> Body (copy) </a></li>
 
-							</ul>
-						</li>
 					<!-- END OF STRINGTEMPLATE CODE -->
 					</ul>
 				</div>
 			</div>
 		</div>
+	</div>
+
+	<iframe name="view" class="ui-layout-east" src="elements/model.html"  scrolling="no"></iframe>
+
+	<!-- "ui-layout-north" class set (topbar) -->
+	<div class="ui-layout-north">
+		<nav class="navbar navbar-inverse">
+			<div class="navbar-header">
+				<span class="navbar-brand">Body</span>
+			</div>
+			<div class="collapse navbar-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#myModal" data-toggle="modal" class="go"><span class="i18n-about"></span></a></li>
+				</ul>
+			</div>
+		</nav>
 	</div>
 
 	<!-- START ABOUT MODAL DIALOG -->
